@@ -1,0 +1,109 @@
+/* Typing animation keyframes */
+@keyframes typing {
+
+    0% {
+        content: '|';
+    }
+    3% {
+        content: 'D|';
+    }
+    6% {
+        content: 'De|';
+    }
+    9% {
+        content:'Des|';
+    }
+    12% {
+        content: 'Desi|';
+    }
+    15% {
+        content: 'Desig|';
+    }
+    18% {
+        content: 'Design|';
+    }
+    21% {
+        content:'Designe|';
+    }
+    24% {
+        content:'Designer|';
+    }
+    27% {
+        content:'Designe|';
+    }
+    30% {
+        content: 'Design|';
+    }
+    33% {
+        content:'Desig|';
+    }
+    36% {
+        content: 'Desi|';
+    }
+    39% {
+        content: 'Des|';
+    }
+    42% {
+        content:'De|';
+    }
+    45% {
+        content:  'D|';
+    }
+    48% {
+        content: '|';
+    }
+    51% {
+        content:'|';
+    }
+    54% {
+        content: 'D|';
+    }
+    57% {
+        content: 'De|';
+    }
+    60% {
+        content: 'Dev|';
+    }
+    63% {
+        content: 'Deve|';
+    }
+    67% {
+        content: 'Devel|';
+    }
+    70% {
+        content: 'Develo|';
+    }
+    71% {
+        content: 'Develop|';
+    }
+    74% {
+        content: 'Develope|';
+    }
+    77% {
+        content: 'Developer |';
+    }
+    80% {
+        content: ' Develope|';
+    }
+    83% {
+        content: ' Develop|';
+    }
+    86% {
+        content: 'Develo|';
+    }
+    89% {
+        content: ' Devel|';
+    }
+    92% {
+        content: ' Deve|';
+    }
+    95% {
+        content: ' Dev|';
+    }
+    98% {
+        content: ' De|';
+    }
+    100% {
+        content: 'D|';
+    }
+}

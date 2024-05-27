@@ -1,0 +1,456 @@
+/* Import Font Variables*/
+@import url('fonts.css');
+
+/* Import Colors Variables */
+@import url('colors.css');
+
+/* Import Animation Keyframes */
+@import url('keyframes.css');
+
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--main-font);
+    list-style-type: none;
+    text-decoration: none !important;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #F5F5F5;
+}
+
+.content {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.content::after {
+    content: '';
+    width: 3rem;
+    height: 0.2rem;
+    background-color: var(--main-color, #0D6EFD);
+    position: absolute;
+    left: 50;
+    bottom: 0;
+    transform: translateX(-50%);
+}
+
+
+/* Start Fixed Bottom Icon */
+.bottom-icon{
+    width: 2.5rem;
+    height: 2.5rem;
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    border-radius: 50%;
+    background-color:var(--main-color, #0D6EFD);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.bottom-icon i {
+    color: white;
+    font-size: 1rem;
+    padding: 0.75rem;
+}
+
+.bottom-icon:hover{
+    background-color: #0777f7d4;
+}
+/* End Fixed Bottom Icon */
+
+
+/* Start Navbar Section */
+.navbar {
+    z-index: 999;
+}
+
+.navbar-background {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.navbar li {
+    padding: 0.5rem;
+    font-size: 1rem;
+    --bs-nav-link-color: white;
+    --bs-nav-link-hover-color: white;
+    --bs-nav-link-disabled-color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.navbar li a {
+    position: relative;
+}
+
+.navbar li a:not(.active)::before {
+    content: '';
+    width: 0;
+    height: 0.1rem;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar li a:not(.active):hover::before {
+    width: 100%;
+}
+
+.navbar li a.active::before {
+    content: '';
+    width: 100%;
+    height: 0.1rem;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.dropdown {
+    cursor: pointer;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu {
+    width: 125%;
+    border-radius: 0;
+    color: black;
+    font-size: 14px;
+    line-height: 1.3rem;
+    letter-spacing: 0.4px;
+    padding: 0.5rem 0;
+    margin: 5px;
+    --bs-dropdown-link-active-bg: white;
+}
+
+.dropdown-menu .dropdown-item {
+    font-size: .75rem;
+}
+
+.dropside {
+width: 100%;
+position: relative;
+display: flex;
+align-items: center;
+}
+
+.dropside i {
+    display: flex;
+    font-size: 1rem;
+    padding-left: 0.5rem;
+}
+
+.dropside-menu {
+    background-color: white;
+    display: block;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    width: 100%;
+    padding: 0 !important;
+    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.1);
+    display: block;
+}
+
+.dropdown .show-dropdown:hover .dropside-menu{
+    display: none;
+}
+
+.dropside-menu .dropside-item {
+    font-size: 0.75rem;
+    color: black;
+    padding: 0.4rem 0.7rem;
+}
+
+.dropside-menu .dropside-item:hover {
+    background-color: #F8F9FA;
+}
+/* End Navbar Section */
+
+
+/* Start Home Section */
+#home {
+    height: 100vh;
+    overflow: hidden;
+    background: url('../assets/hero-bg.jpg') rgba(0, 0, 0, 0.5);
+    background-blend-mode: multiply;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    top: 200px;
+}
+
+.home-content {
+    color: white;
+}
+
+.home-content h1 {
+    font-size: 4.7rem !important;
+    font-weight: 600;
+    line-height: 5rem;
+    margin-bottom: 2rem;
+}
+
+.home-content p {
+    font-size: 2.8rem;
+    font-weight: 600;
+    line-height: 3.25rem;
+}
+
+.home-content p::after {
+    content: '';
+    content: "|";
+    animation-name: typing;
+    animation-duration:5s;
+    animation-iteration-count: infinite;
+}
+
+/* Start About Section */
+
+.about-me {
+    position: relative;
+}
+
+.about-me::after {
+    content: '';
+    width: 6rem;
+    height: 4px;
+    border-radius: 15px;
+    background-color: var(--main-color, #0D6EFD);
+    position: absolute;
+    left: -5px;
+    bottom: -5px;
+}
+
+/* Start Home Section */
+
+
+/* Start Services Section */
+.services-title {
+    font-size: 3rem;
+}
+
+.services-icon {
+    width: 7rem;
+    height: 7rem;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #000;
+    font-size: 2rem;
+    border: 10px solid var(--main-color, #0D6EFD);
+    cursor: pointer;
+    transition: all .8s ease-in-out;
+}
+
+.services-icon:hover
+{
+    background-color: var(--main-color, #0D6EFD);
+    border: 10px solid var(--second-color, #CDE1F8);
+}
+
+.item{
+    border-radius: 2rem;
+}
+
+.container .text-line::before{
+    content: "";
+    width: 50px;
+    height: 3px;
+    position: absolute;
+    top:100%;
+    background-color: var(--mainColor);
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 10px;
+}
+
+/* End Services Section */
+
+
+/* Start Counter Section */
+
+.bg-image {
+    background-image:url(../assets/post-3.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+}
+
+.bg-color {
+    background-color: #257adbcf;
+}
+
+.counter-icon {
+    width: 5rem;
+    height: 5rem;
+    color: white;
+    font-size: 30px;
+    border-radius: 50%;
+    border: 10px solid var(--second-color, #CDE1F8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* End Counter Section */
+
+
+/* <!-- Start Portfolio Section --> */
+
+.card-icon{
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid var(--main-color, #0D6EFD);
+    border-radius: 50%;
+    font-size: 25px;
+    color: var(--main-color, #0D6EFD);
+    cursor: pointer;
+}
+.card-img img{
+    transition: all 1s;
+    cursor: pointer;
+}
+.for-hover:hover img{
+    transform: scale(1.2);
+}
+
+.work-text {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--main-color, #0D6EFD);
+}
+/* <!-- End Portfolio Section --> */
+
+
+/* Start Blog Section */
+.card img {
+    cursor: pointer;
+}
+
+.footer-image {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+}
+/* End Blog Section */
+
+
+/* <!-- Start Contact Section --> */
+.bg-image-tree{
+    background-image:url(../assets/overlay-bg.jpg) ;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment:fixed;
+}
+
+textarea{
+    border: #dddddd 1px solid;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    width: 100%;
+    padding-left: 1rem;
+    padding-top: 0.5rem;
+}
+
+input {
+    padding-left: 1rem;
+    font-size: 0.9rem;
+    border: #dddddd 1px solid;
+}
+
+input:focus, textarea:focus{
+    border: 1px solid var(--main-color, #0D6EFD);
+    outline: 4px solid #0979fa29;;
+}
+
+button{
+    background-color: var(--main-color, #0D6EFD);
+    padding: 1rem 1.5rem;
+    border-radius: 2rem;
+    margin-top: 1rem;
+    color: #fff;
+    font-weight: 500;
+    border: none;
+}
+
+.hover-icon{
+    width: 3rem;
+    height: 3rem;
+    border: 3px solid var(--main-color, #0D6EFD);
+    color: var(--main-color, #0D6EFD);
+    border-radius: 50%;
+    font-size: 20px;
+    padding: 12px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.hover-icon:hover{
+    border: 3px solid var(--second-color, #CDE1F8);
+    background-color:var(--main-color, #0D6EFD);
+    color: white;
+}
+
+.hover-btn{
+    border: 5px solid white;
+    transition: all .5s ease-in-out;
+}
+.hover-btn:hover{
+    border: 5px solid var(--second-color, #CDE1F8);
+    background-color: #0d6dfdcc;
+}
+/* End Contact Section */
+
+
+/* Start Footer Section */
+footer {
+    background-color:#0062D3;
+    line-height: 2rem;
+}
+/* End Footer Section */
+
+
+/* Start Media Queries Section */
+@media screen and (max-width: 991px) {
+    .navbar li a:not(.active, .dropdown-toggle):hover::before
+    {
+        width: 0;
+    }
+    .navbar li a.active::before {
+        width: 0%;
+    }
+/*
+    .dropdown:hover .dropdown-menu .dropdown-item {
+        display: none;
+    }
+
+    .dropdown .dropdown-menu {
+        display: block;
+    } */
+}
+/* End Media Queries Section */
